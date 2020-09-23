@@ -1,0 +1,42 @@
+<div>
+    <p-messages severity="info">
+        <ng-template pTemplate>
+
+            <div class="p-ml-2">You're signed out right now. By continuing, please
+                <span class="link" [routerLink]="['/login']">Login</span>
+                to proceed.</div>
+        </ng-template>
+    </p-messages>
+
+    <div class="p-grid p-jc-center">
+        <div class="p-md-7 ">
+            <p-scrollPanel [style]="{width: '100%', height: '360px'}" styleClass="custombar">
+                <cart-card-view></cart-card-view>
+            <cart-card-view></cart-card-view>  
+            <cart-card-view></cart-card-view>  
+            </p-scrollPanel>
+        </div>
+     
+        <div class="p-md-4 p-d-flex p-flex-column p-ai-center" >
+            <table class="p-py-3 p-px-1 p-shadow-4">
+                <tr>
+                    <td >Subtotal (3)</td>
+                    <td>{{32343|currency:'INR'}}</td>
+                </tr>
+                <tr>
+                    <td>Delivery Fee </td>
+                    <td>{{23|currency:'INR'}}</td>
+                </tr>
+                <tr class="p-mb-2">
+                    <td class="line-x " colspan="2"> </td>
+                </tr>
+                <tr>
+                    <td >Total</td>
+                    <td>{{32343|currency:'INR'}}</td>
+                </tr>
+            </table>
+            <div class="btn cus-btn">Secure Checkout</div>
+        </div>
+    </div>
+  
+</div>

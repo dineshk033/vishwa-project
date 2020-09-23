@@ -1,0 +1,44 @@
+.card-image{
+    width:100%;
+    border-radius: 6px;
+}
+
+li {
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+    color:var(--text-color)
+}
+
+.card-title{
+    cursor: pointer;
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+    font-weight: 600rem;
+    color:#495057;
+    }
+
+.card-price {
+    padding-bottom: 1rem;
+    color: #37a864;//var(--text-color);
+    font-size: 1.2rem;
+    font-family:BogleWeb;
+        // color: var(--text-color);
+    // font-size: 1rem;
+    margin:0.7rem 0 0;
+}
+
+.price-strike{
+    text-decoration: line-through;
+    color:var(--text-color-secondary);
+    font-size: 0.7rem;
+}
+
+.card-title:hover {
+    text-decoration: underline;
+}
+
+.btm-border{
+    padding-bottom: 0.8rem;
+    border-bottom: 1.5px solid var(--surface-d);
+    margin-bottom: 1.5rem;
+}

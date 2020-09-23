@@ -1,0 +1,21 @@
+<!-- <div class="flex">
+    <div *ngFor="let product of products" class="p-col-3">
+ 
+    </div>
+</div> -->
+
+<p-carousel [value]="products" [numVisible]="4" [numScroll]="1" [circular]="true" [responsiveOptions]="responsiveOptions">
+    <ng-template pTemplate="header">
+        <div class="p-d-flex " style="height: 80px;">
+            <h3 class="c-header">Deal of the Day
+                <span class="material-icons-outlined"
+                style="font-size: 1.3rem;vertical-align: middle;">alarm</span>          
+            </h3>
+            <h3 class="c-label"></h3>
+        </div>
+       
+    </ng-template>
+    <ng-template let-product pTemplate="item">
+        <customer-card-two [productDetail]="product"></customer-card-two>
+    </ng-template>
+</p-carousel>

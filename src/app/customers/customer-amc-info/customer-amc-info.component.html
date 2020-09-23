@@ -1,0 +1,38 @@
+<p-tabMenu [model]="items" [activeItem]="activeItem"></p-tabMenu>
+<div class="p-grid p-my-3 p-jc-center">
+    <ng-template ngFor let-detail [ngForOf]="[1,2]">
+        <p-panel header="On-Time Vist" class="p-md-4">
+            <li>Why Choose Us?</li>
+            <li>No Fix No Fee</li>
+            <li>Quick Repair Process</li>
+            <li>Instant Phone & Remote Support</li>
+        </p-panel>
+    </ng-template>
+    
+</div>
+<p-card>
+<div class="p-grid">
+    <ul class="p-md-6 p-pl-5 p-ai-center">
+        <li class="first">Why Choose Us?</li>
+        <li>No Fix No Fee</li>
+        <li>Quick Repair Process</li>
+        <li>Instant Phone & Remote Support</li>
+        <li>Experienced and well-trained technicians</li>
+        <li>Call login facility through online or Phone</li>
+        <li>Call Request Tracking</li>
+    </ul>
+    <div class="p-md-6">
+        <div class="p-grid">
+            <ng-template ngFor let-detail [ngForOf]="customerLog">
+                <div class="p-ai-center  p-text-center p-col-6">
+                    <span class="material-icons" style="font-size: 2.5rem;">
+                        {{detail.icon}}
+                    </span>
+                    <h2 class="header">{{detail.count}}+</h2>
+                    <div>{{detail.label}}</div>
+                </div>
+            </ng-template>
+        </div>
+    </div>
+</div>
+</p-card>

@@ -1,0 +1,9 @@
+<div class="container">
+    <img class="card-image" [src]="productDetail.image">
+    <h4 class="card-title">{{productDetail.name}}</h4>
+       <h4 class="card-price">
+            {{productDetail.offerPrice|currency:'INR'}}
+            <span class="price-strike">{{productDetail.price|currency:'INR'}}</span>
+
+        </h4>
+</div>

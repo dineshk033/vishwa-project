@@ -1,0 +1,25 @@
+li {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color:var(--text-color-secondary)
+}
+
+li.first{
+    list-style-type: none;
+    font-size:1.5rem ;
+    padding: 0 0 10px 0;
+    margin:0;
+    text-align: center;
+    color:var(--text-color)
+}
+:host ::ng-deep .p-card-content{
+    padding:0 0 10px;
+}
+:host ::ng-deep .p-card-body{
+    padding-bottom: 0;;
+}
+.header{
+    margin: 0;
+    font-size: 1.2rem;
+    color:var(--primary-color)
+}

@@ -1,0 +1,36 @@
+<div style="width: 100%;">
+    <div class="header">
+        Filter
+    </div>
+    <!-- <div class="p-px-2">
+        <h5>CPU Type</h5>
+        <div *ngFor="let processor of processorCatg" class="p-field-checkbox">
+            <p-checkbox name="processor" value="processor" [value]="processor" [(ngModel)]="processorSelect"
+                [inputId]="processor.key"></p-checkbox>
+            <label [for]="processor.key">{{processor.name}}</label>
+        </div>
+    </div> -->
+    <p-panel header="Price Range"   [toggleable]="true">
+        <div *ngFor="let price of priceRange" class="p-field-checkbox">
+            <p-checkbox name="price" value="price" [value]="price" [(ngModel)]="priceSelect"
+                [inputId]="price.key" (onChange)="handlePriceChange()" ></p-checkbox>
+            <label [for]="price.key">{{price.name}}</label>
+        </div>
+    </p-panel>
+    <p-panel header="Processor Type"  [toggleable]="true">        
+        <div *ngFor="let processor of processorCatg;let index=index" class="p-field-checkbox">
+                <p-checkbox name="processor" value="processor" [value]="processor" [(ngModel)]="processorSelect"
+                    [inputId]="processor.key"></p-checkbox>
+                <label [for]="processor.key">{{processor.name}}</label>
+            </div>
+    </p-panel>
+    <p-panel header="Screen Size"  [toggleable]="true">        
+        <div *ngFor="let screen of screenCatg" class="p-field-checkbox">
+            <p-checkbox name="screen" value="screen" [value]="screen" [(ngModel)]="screenSelect"
+                [inputId]="screen.key"></p-checkbox>
+            <label [for]="screen.key">{{screen.name}}</label>
+            
+        </div>
+       
+    </p-panel>
+</div>

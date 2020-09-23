@@ -1,0 +1,46 @@
+/* You can add global styles to this file, and also import other style files */
+// @import '~material-icons/iconfont/material-icons.css';
+:root{
+    --primary-ccolor:#041E42;
+    --secondary-ccolor:#FFC220;
+    --tertary-ccolor:#6D6E71;
+}
+
+body{
+    font-family: BogleWeb,Helvetica Neue,Helvetica,Arial,sans-serif;
+    // background: var(--surface-b);
+}
+
+f-left{
+    float: left;
+}
+
+f-right{
+    float:right
+}
+
+.btn{
+
+    background: var(--secondary-ccolor);
+    padding: 12px 8px;
+    border-radius: 5px;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.2);
+    width: 98%;
+    border: none;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    margin: 0.5rem;
+}
+.hv-center{
+          /* Center the content */
+          align-items: center;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+}
+
+.line-x{
+    margin: 1rem 0;
+    border-bottom: 1px solid #ddd;
+}

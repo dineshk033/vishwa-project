@@ -1,0 +1,38 @@
+<div class="p-grid p-jc-center p-pb-2">
+    <div class="p-md-4 p-col-12">
+        <img src="assets/dell.jpg" class="img" />
+    </div>
+    <div class="p-md-6 p-col-12">
+        <h4 class="title">
+            NEW
+            Refurbished SAMSUNG Chromebook 4 11.6" Intel® Celeron® Processor N4000 4GB RAM 32GB eMMC Intel UHD
+            Graphics
+            600 - XE310XBA-K01US
+        </h4>
+        <div class="subTitle p-mb-2">Seller refurbished</div>
+        <span class="p-tag p-tag-success p-mb-2" [style]="{'min-width':'fit-content'}">In Stock</span>
+
+        <div class="p-d-flex p-ai-center p-jc-between">
+            <!-- <div class="p-col-4"> -->
+            <!-- </div> -->
+            <div class="p-d-flex p-ai-center">
+                <span style="color:var(--text-color) " class="p-pr-2">Qty</span>
+                <p-dropdown [options]="qtyOptions" [style]="{'width':'75px','height':'25px'}" editable="true"
+                    optionLabel="name"></p-dropdown>
+            </div>
+            <div>
+                <button pButton pRipple type="button" icon="pi pi-trash" label="Delete"
+                    class="p-button-danger p-button-text"></button>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="p-md-2">
+        <h4 class="card-price">
+            {{34536|currency:'INR'}}
+            <div class="price-strike">{{23114|currency:'INR'}}</div>
+
+        </h4>
+    </div>
+</div>

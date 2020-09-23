@@ -1,0 +1,23 @@
+<div class="p-grid p-fluid p-d-flex p-ai-center p-jc-center btm-border">
+    <div class="p-col-12 p-lg-3">
+        <img class="card-image p-shadow-3" [src]="productDetail.image">
+    </div>
+    <div class="p-md-8 p-lg-7">
+        <h4 class="card-title">{{productDetail.name}}</h4>
+        <ul>
+            <li>Processor Model:Core i3 3.2 GHz</li>
+            <li>Computer Memory Size:4 GB</li>
+            <li>Hard Drive Size:500 GB</li>
+            <li>Display Size:15.6 inches</li>
+            <li>Operating System:Windows 10 Home</li>
+        </ul>
+    </div>
+    <div class="p-md-4 p-lg-2 p-as-start">
+        <h4 class="card-price">
+            {{productDetail.offerPrice|currency:'INR'}}
+            <div class="price-strike">{{productDetail.price|currency:'INR'}}</div>
+
+        </h4>
+        <p-button label="Add to Cart" icon="pi pi-shopping-cart" styleClass="p-button-sm p-button-warning" ></p-button>
+    </div>
+</div>

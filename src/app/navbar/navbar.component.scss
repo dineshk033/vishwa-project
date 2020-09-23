@@ -1,0 +1,33 @@
+.nav-toolbar{
+    background-color: var(--primary-ccolor);
+    color: white;
+}
+
+.material-icons{
+    margin-right: 0.5rem;
+    cursor: pointer;
+}
+
+.logo-title{
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+*{
+    vertical-align: middle;
+}
+
+:host ::ng-deep .p-megamenu{
+    border: none;
+    padding:0.3rem 0 0 !important;
+    background-color: transparent;
+    border:none;
+    justify-content: center !important;
+    &.p-megamenu-horizontal .p-megamenu-root-list{
+        justify-content: center;
+    }
+}
+// .nav-title > span{
+//     vertical-align: middle;
+//     cursor: pointer;
+// }

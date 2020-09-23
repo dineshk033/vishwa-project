@@ -1,0 +1,13 @@
+<div class="p-grid p-nogutter">   
+    <div class="p-col-10" *ngFor="let list of itemSpec;">
+        <h5>{{list.title}}</h5>
+        <ng-template ngFor let-item [ngForOf]="list.speclist">
+            <div class="span-1" >
+                <b>{{item.label}}</b>
+           </div>
+           <div class="span-2" >
+            {{itemValue[item.key]?itemValue[item.key]:'-'}}
+           </div>
+        </ng-template>        
+    </div>
+</div>

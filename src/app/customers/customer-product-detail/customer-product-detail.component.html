@@ -1,0 +1,77 @@
+<div class="p-m-3">
+    <div class="p-grid  p-jc-center" style="position: relative;">
+        <div class="p-md-5 ">
+            <product-image-view></product-image-view>
+        </div>
+        <div class="p-md-6">
+            <h4 class="title">2020 Premium HP Pavilion 15 Business Laptop Computer I 15.6" FHD IPS Touchscreen Display I
+                10th Gen
+                Intel Quad-Core i7-1065G7 I 4GB DDR4 1TB PCIe SSD 500GB HDD I Backlit KB USB-C WIFI BT5.0 Win 10</h4>
+
+            <div class="p-grid p-ai-center p-my-2">
+                <div class="p-md-4">
+                    <div class="subTitle">Model:Hp Pavilion 15</div>
+                    <h4 class="card-price">
+                        {{12324|currency:'INR'}}
+                        <span class="price-strike">{{23423|currency:'INR'}}</span>
+                    </h4>
+                    <span class="p-tag p-tag-danger">Only 5 Left!</span>
+                </div>
+                <div class="p-md-8 p-d-flex p-ai-center" >
+                    <!-- <p-button label="Add to cart" icon="pi pi-shopping-cart" styleClass="p-button-warning p-mr-3"></p-button>
+                    <p-button label="Buy Now" styleClass="p-button-warning"></p-button> -->
+
+                    <button class="btn hv-center" style="max-width: 150px;">
+                        <span class="material-icons " style="font-size: 0.9rem;margin-right: 0.3rem;">
+                            shopping_cart
+                        </span>
+                        Add to cart
+                    </button>
+                    <button class="btn" style="background: var(--text-color); max-width: 150px;">Buy Now</button>
+                </div>
+            </div>
+            <hr />
+            <div class="p-grid p-my-2">
+                <div class="p-col-7">
+                    <div style="font-size: 0.9rem;color:var(--text-color); font-weight: 600;">Highlight</div>
+
+                    <ul class="highlight">
+                        <li>Processor Model:Core i3 3.2 GHz</li>
+                        <li>Computer Memory Size:4 GB</li>
+                        <li>Hard Drive Size:500 GB</li>
+                        <li>Display Size:15.6 inches</li>
+                        <li>Operating System:Windows 10 Home</li>
+                    </ul>
+                </div>
+                <div class="p-col-5">
+                    <div style="font-size: 0.9rem;color:var(--text-color); font-weight: 600;">Working Condition</div>
+                    <div class="p-text-italic subTitle p-py-1">
+                        Quality was in pretty great condition. Has a few slight scratches and a tiny dent but that's to
+                        be expected.
+                    </div>
+                    <div style="font-size: 0.9rem;color:var(--text-color); font-weight: 600;">Returns</div>
+                    <div class="p-text-italic subTitle p-py-1">
+                        30 day returns. Buyer pays for return shipping
+                    </div>
+                </div>
+            </div>
+            <p-tabView>
+                <p-tabPanel header="Spec & Details">
+                    <product-tab-desc></product-tab-desc>
+                </p-tabPanel>
+                <p-tabPanel header="Header 2">
+                    <ng-template pTemplate="content">
+                        <product-tab-desc></product-tab-desc>
+                    </ng-template>
+                </p-tabPanel>
+                <p-tabPanel header="Header 3">
+                    <ng-template pTemplate="content">
+                        <product-tab-desc></product-tab-desc>
+                    </ng-template>
+                </p-tabPanel>
+            </p-tabView>
+        </div>
+    </div>
+    <cus-popular-product></cus-popular-product>
+
+</div>

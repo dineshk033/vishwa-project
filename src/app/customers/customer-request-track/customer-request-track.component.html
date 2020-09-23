@@ -1,0 +1,26 @@
+<div class="p-grid p-jc-center p-ai-center" >
+    <div class="p-col-12 p-lg-8" style="height: 100%;">
+        <p-steps [model]="items" [readonly]="false" [(activeIndex)]="activeIndex"></p-steps>    
+        <div [ngSwitch]="activeIndex">
+            <div  *ngSwitchCase="0"> 
+                <h4>Appointment Details</h4>
+                <div class="text">Dinesh S</div>
+                <div class="text">995297239</div>
+                <div class="text">Laptop not working properly. Every 10 min auto reboot occurs</div>
+            </div>
+            <div *ngSwitchCase="1">
+                <h4>Technicial Info</h4>
+                <div class="text">Vijay K</div>
+                <div class="text">Code: #2132</div>
+                <div class="text">9232344546</div>
+            </div>
+            <div *ngSwitchCase="2">
+                <h4>Report</h4>
+                <div class="text">Vijay K</div>
+                <div class="text">General service done. Os reboot also completed</div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- <p-steps [model]="items"></p-steps> -->
+</div>

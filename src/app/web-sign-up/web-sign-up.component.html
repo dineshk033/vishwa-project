@@ -1,0 +1,41 @@
+<!-- <div style="position: ;"></div> -->
+<div class="reg">
+    <h4 class="p-text-center p-pb-2">New Account Creation</h4>
+    <form class="p-fluid p-formgrid p-grid ">
+
+        <div class="p-field p-col-12 p-md-6">
+            <label for="firstname">Firstname</label>
+            <input id="firstname" type="text" pInputText>
+        </div>
+        <div class="p-field p-col-12 p-md-6">
+            <label for="lastname">Lastname</label>
+            <input id="lastname" type="text" pInputText>
+        </div>
+        <div class="p-field p-col-12 p-md-6">
+            <label for="password">Password</label>
+            <div class="p-inputgroup">
+                <input type="password" pPassword />
+                <button *ngIf="toggle;else show" type="button" (click)="toggle=false" pButton pRipple
+                    icon="pi pi-eye"></button>
+                <ng-template #show>
+                    <button type="button" (click)="toggle=true" pButton pRipple icon="pi pi-eye-slash"></button>
+                </ng-template>
+            </div>
+        </div>
+        <div class="p-field p-col-12 p-md-6">
+            <label for="cpassword">Confirm Password</label>
+            <input id="cpassword" type="text" pInputText>
+        </div>
+        <div class="p-field p-col-12 p-md-6">
+            <label for="email">Email</label>
+            <input id="email" type="text" pInputText>
+        </div>
+        <div class="p-field p-col-12 p-md-6">
+            <label for="phone">Contact</label>
+            <input id="phone" type="text" pInputText>
+        </div>
+        <div class="p-m-auto">
+            <button pButton type="submit" label="Register" class="p-button-warning p-mr-3" style="width: 200px;"></button>
+        </div>        
+    </form>
+</div>

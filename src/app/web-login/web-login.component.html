@@ -1,0 +1,28 @@
+<div class="p-grid p-ai-center p-jc-center">
+    <form class="card p-px-5 p-py-2 p-my-5 p-lg-4" [formGroup]="loginForm" autocomplete="off"
+        (ngSubmit)="onSubmit()">
+        <h4 >Login</h4>
+        <div class="p-fluid p-formgrid p-grid">
+            <div class="p-field p-col-12 ">
+                <label for="email">Username</label>
+                <input id="email" formControlName="email" placeholder="username@mail.com" type="text" pInputText>
+            </div>
+            <div class="p-field p-col-12">
+                <label for="password">Password</label>
+                <div class="p-inputgroup">
+                    <input type="password"  pPassword formControlName="password" [feedback]="false" />
+                    <button *ngIf="toggle;else show" type="button" (click)="toggle=false" pButton pRipple icon="pi pi-eye" ></button>
+                    <ng-template #show>
+                        <button type="button"  (click)="toggle=true" pButton pRipple icon="pi pi-eye-slash" ></button>
+                    </ng-template>                   
+                </div>
+            </div>
+        </div>
+
+        <div class="p-text-center">
+            <button pButton type="submit" [disabled]="loginForm.status ==='INVALID'" label="Login"
+                class="p-button-warning p-mr-3" style="width: 200px;"></button>
+            <div class="link p-my-3" routerLink="/signup">or Create an account</div>
+        </div>
+    </form>
+</div>

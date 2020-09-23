@@ -1,0 +1,39 @@
+.img{
+    width: 90%;
+    border-radius: 12px;
+}
+
+.title{
+    margin: 0 0 1rem 0;
+    font-size: 0.9rem;
+    font-weight: 600rem;
+    color:#495057;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+    line-height: 1.2rem;
+    height: 54px;
+
+}
+
+.subTitle{
+    font-size: 1rem;
+    color:var(--text-color-secondary);
+}
+
+.card-price {
+    padding-bottom: 1rem;
+    color: #37a864;//var(--text-color);
+    font-size: 1em;
+    font-family:BogleWeb;
+        // color: var(--text-color);
+    // font-size: 1rem;
+    margin:0.7rem 0 0;
+}
+
+.price-strike{
+    text-decoration: line-through;
+    color:var(--text-color-secondary);
+    font-size: 0.7rem;
+}

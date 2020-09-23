@@ -1,0 +1,61 @@
+<div class="p-fluid p-grid p-nogutter p-ai-center nav-toolbar">
+    <div class="nav-title p-md-3" (click)='display=true'>
+        <span class="material-icons">
+            menu
+        </span>
+        <span class="logo-title">
+            Vishwa Group of Company
+        </span>
+    </div>
+    <div class="p-md-5">
+        <auto-complete-search></auto-complete-search>
+    </div>
+    <div class="p-md-4 p-d-flex p-jc-md-end p-jc-center p-ai-center">
+        <ng-template [ngIf]="!userName" [ngIfElse]="account">
+            <div class="p-px-3">
+                <button pButton pRipple [routerLink]="['/login']" type="button" label="Login"
+                    class="p-button-warning p-button-text"></button>
+            </div>
+            <div class="p-px-1">
+                <button pButton pRipple [routerLink]="['/signup']" type="button" label="Register"
+                    class="p-button-danger p-button-text"></button>
+            </div>
+            <div class="p-px-3">
+                <span class="p-overlay-badge ">
+                    <span>
+                        Cart
+                    </span>
+                    <span class="material-icons-outlined">
+                        shopping_cart
+                    </span>
+                    <span class="p-badge p-badge-warning">2</span>
+                </span>
+            </div>
+        </ng-template>
+        <ng-template #account>
+            <div class="p-px-3">
+                <span class="material-icons-outlined">
+                    account_circle
+                </span>
+                <span>
+                    Account
+                </span>
+            </div>
+            <div class="p-px-3">
+                <span class="p-overlay-badge ">
+                    <span>
+                        Cart
+                    </span>
+                    <span class="material-icons-outlined">
+                        shopping_cart
+                    </span>
+                    <span class="p-badge p-badge-warning">2</span>
+                </span>
+            </div>
+        </ng-template>
+
+    </div>
+</div>
+<p-megaMenu [model]="items"></p-megaMenu>
+<p-menu #menu [popup]="true" [model]="subMenu"></p-menu>
+<app-sidebar [display]="display" (closeDisplay)="display=$event"></app-sidebar>

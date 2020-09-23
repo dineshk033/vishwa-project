@@ -1,0 +1,55 @@
+<div class="p-mx-4 p-my-2 p-grid">
+    <div class="p-md-3 p-d-none p-d-md-block">
+        <cus-laptop-filter></cus-laptop-filter>
+    </div>
+    <div class="p-md-9 p-pl-md-3 p-jc-center">
+        <p-dataView #dv [value]="products" [paginator]="true" [rows]="3" filterBy="name" layout="grid">
+            <ng-template pTemplate="header">
+                <div class="p-d-flex p-jc-between">
+                    <p-dropdown placeholder="Sort By Price" styleClass="p-mb-2 p-mb-md-0"></p-dropdown>
+
+                    <p-dataViewLayoutOptions></p-dataViewLayoutOptions>
+                </div>
+            </ng-template>
+            <ng-template let-product pTemplate="listItem">
+                <div class="p-col-12">
+                    <card-view-three [productDetail]="product"></card-view-three>
+                </div>
+            </ng-template>
+
+            <ng-template let-product pTemplate="gridItem">
+                <div class="p-col-12 p-md-6 p-lg-3">
+                    <div>
+                        <customer-card-one [productDetail]="product"></customer-card-one>
+                    </div>
+                </div>
+            </ng-template>
+        </p-dataView>
+        <!-- <div class="p-mb-3 p-d-flex p-jc-between p-ai-center">
+            <p-dropdown [options]="sortByOption" [(ngModel)]="sortBy" optionLabel="name"></p-dropdown>
+            <div>
+                <span class="material-icons" style="font-size:2rem;cursor: pointer;"
+                    (click)="gridToggle=true">list</span>
+                <span class="material-icons" style="font-size:2rem;cursor: pointer;"
+                    (click)="gridToggle=false">view_module</span>
+            </div>
+        </div>
+        <div *ngFor="let product of products">
+            <ng-template [ngIf]="gridToggle" [ngIfElse]="listGrid">
+                <card-view-three [productDetail]="product"></card-view-three>
+            </ng-template>
+            <ng-template #listGrid>
+                <div class="p-grid p-mb-4 p-pb-3">
+                    <div *ngFor="let product of products" class="p-lg-3 p-md-4">
+                        <customer-card-one [productDetail]="product"></customer-card-one>
+                    </div>
+                </div>
+            </ng-template>
+        </div> -->
+    </div>
+</div>
+
+<!-- <span class="p-input-icon-right p-mb-2 p-mb-md-0">
+    <i class="pi pi-search"></i>
+    <input type="search" pInputText placeholder="Search by Name" />
+</span> -->

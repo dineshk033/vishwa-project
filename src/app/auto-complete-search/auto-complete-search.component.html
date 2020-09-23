@@ -1,0 +1,14 @@
+<form [formGroup]="search"> 
+    <div class="input-group-btn">
+        <select class="dropdown-option" formControlName="category">
+            <option *ngFor="let catg of categoriesOption" [ngValue]="catg.value">{{catg.label}}</option>
+        </select>
+        <input class="search-input " formControlName="input" />
+        <div class="bg-icon" >
+            <span class="material-icons icon-search">
+                search
+            </span>
+        </div>
+        
+    </div>
+</form>

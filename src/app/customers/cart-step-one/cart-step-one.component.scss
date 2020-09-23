@@ -1,0 +1,78 @@
+.link{
+    color:var(--primary-ccolor);
+    cursor: pointer;
+    font-size:1.2rem;
+    font-weight: 600;
+}
+
+.link:hover{
+    color:var(--secondary-ccolor)
+}
+
+.link:focus,.link:active{
+    outline:none
+}
+
+
+
+table{
+    // border:1px solid var(--surface-b);
+    width: 100%;
+    // background-color: var(--secondary-ccolor);
+    border-radius: 10px;
+    // color:white
+}
+td { 
+    font-size: 0.875rem;
+    padding:0 0.8rem 0.5rem;   
+}
+
+td:nth-child(1) { text-align: left; font-weight: 600; }
+td:nth-child(2) { text-align: right; }
+
+tr:last-child > td{
+    text-align:center;
+    font-size: 1rem;
+    font-weight: 600;
+    padding:  1rem 0.5rem 0;
+    color:var(--text-color)
+}
+
+.cus-btn{
+    max-width:  100%;
+    margin-top:2rem;
+    text-align: center;
+}
+
+:host ::ng-deep .p-scrollpanel {
+    p {
+        padding: .5rem;
+        line-height: 1.5;
+        margin: 0;
+    }
+
+    &.custombar {
+        .p-scrollpanel-wrapper {
+            border-right: 9px solid var(--layer-1);
+        }
+        
+        .p-scrollpanel-bar {
+            background-color: var(--secondary-ccolor);
+            opacity: 1;
+            transition: background-color .2s;
+
+            &:hover {
+                background-color: var(--primary-color);
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 769px){
+        .cus-btn{
+        max-width: 68%;
+    }
+    table{
+        width: 70%;
+    }
+}
