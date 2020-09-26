@@ -12,6 +12,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { AutoCompleteSearchComponent } from './auto-complete-search/auto-complete-search.component';
 import { CustomstyleDirective } from './auto-complete-search/customstyle.directive';
+import { SpinnerComponent } from './spinner/spinner.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import { CustomstyleDirective } from './auto-complete-search/customstyle.directi
     NavbarComponent,
     SidebarComponent,
     AutoCompleteSearchComponent,
-    CustomstyleDirective
+    CustomstyleDirective,
   ],
   imports: [
     BrowserModule,

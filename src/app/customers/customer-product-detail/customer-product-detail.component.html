@@ -1,18 +1,19 @@
-<div class="p-m-3">
+<div *ngIf="loading" class="centerOfPage">
+    <app-spinner></app-spinner>
+</div>
+<div *ngIf="!loading" class="p-m-3">
     <div class="p-grid  p-jc-center" style="position: relative;">
         <div class="p-md-5 ">
-            <product-image-view></product-image-view>
+            <product-image-view [urlList]="product.imageUrl"></product-image-view>
         </div>
         <div class="p-md-6">
-            <h4 class="title">2020 Premium HP Pavilion 15 Business Laptop Computer I 15.6" FHD IPS Touchscreen Display I
-                10th Gen
-                Intel Quad-Core i7-1065G7 I 4GB DDR4 1TB PCIe SSD 500GB HDD I Backlit KB USB-C WIFI BT5.0 Win 10</h4>
+            <h4 class="title">{{product.display_name}}</h4>
 
             <div class="p-grid p-ai-center p-my-2">
                 <div class="p-md-4">
-                    <div class="subTitle">Model:Hp Pavilion 15</div>
+                    <div class="subTitle">Model: {{product.brand+' '+product.variantModel|titlecase }}</div>
                     <h4 class="card-price">
-                        {{12324|currency:'INR'}}
+                        {{product.price.price|currency:'INR'}}
                         <span class="price-strike">{{23423|currency:'INR'}}</span>
                     </h4>
                     <span class="p-tag p-tag-danger">Only 5 Left!</span>
@@ -36,11 +37,11 @@
                     <div style="font-size: 0.9rem;color:var(--text-color); font-weight: 600;">Highlight</div>
 
                     <ul class="highlight">
-                        <li>Processor Model:Core i3 3.2 GHz</li>
-                        <li>Computer Memory Size:4 GB</li>
-                        <li>Hard Drive Size:500 GB</li>
-                        <li>Display Size:15.6 inches</li>
-                        <li>Operating System:Windows 10 Home</li>
+                        <li>Processor Model:{{product.specification.processor}}</li>
+                        <li>Computer Memory Size:{{product.specification.memory}}</li>
+                        <li>Hard Drive Size:{{product.specification.hardDisk}}</li>
+                        <li>Display Size:{{product.specification.screenSize}} inch</li>
+                        <li>Operating System:{{product.os}}</li>
                     </ul>
                 </div>
                 <div class="p-col-5">
@@ -57,16 +58,11 @@
             </div>
             <p-tabView>
                 <p-tabPanel header="Spec & Details">
-                    <product-tab-desc></product-tab-desc>
+                    <product-tab-desc [itemValue]="product"></product-tab-desc>
                 </p-tabPanel>
-                <p-tabPanel header="Header 2">
+                <p-tabPanel header="Return Policy">
                     <ng-template pTemplate="content">
-                        <product-tab-desc></product-tab-desc>
-                    </ng-template>
-                </p-tabPanel>
-                <p-tabPanel header="Header 3">
-                    <ng-template pTemplate="content">
-                        <product-tab-desc></product-tab-desc>
+                        <h5>After receving purchased item, refund process will initiate.Customers pay for return shipping. Customers can choose either amount or replacement.</h5>
                     </ng-template>
                 </p-tabPanel>
             </p-tabView>

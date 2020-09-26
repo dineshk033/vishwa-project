@@ -1,8 +1,7 @@
-<div style="width: 100%;">
-    <div class="header">
-        Filter
-    </div>
-    <!-- <div class="p-px-2">
+<div class="header p-d-flex p-jc-between p-ai-center">
+  Filter
+  <button pButton pRipple type="button" label="Clear" icon="pi pi-refresh" iconPos="right" class="p-button-text p-button-plain"></button></div>
+<!-- <div class="p-px-2">
         <h5>CPU Type</h5>
         <div *ngFor="let processor of processorCatg" class="p-field-checkbox">
             <p-checkbox name="processor" value="processor" [value]="processor" [(ngModel)]="processorSelect"
@@ -10,27 +9,96 @@
             <label [for]="processor.key">{{processor.name}}</label>
         </div>
     </div> -->
-    <p-panel header="Price Range"   [toggleable]="true">
-        <div *ngFor="let price of priceRange" class="p-field-checkbox">
-            <p-checkbox name="price" value="price" [value]="price" [(ngModel)]="priceSelect"
+<p-panel header="Price Range" [toggleable]="true">
+  <p-slider
+    [range]="true"
+    [(ngModel)]="priceRange"
+    [min]="5000"
+    [max]="150000"
+    (onChange)="handlePriceChange($event)"
+    [step]="2500"
+  ></p-slider>
+
+  <div class="p-grid p-mt-3">
+    <span class="p-md-6 p-float-label p-mt-5 p-mb-4">
+      <p-inputNumber
+        inputId="inputtext"
+        currency="INR"
+        mode="currency"
+        locale="en-IN"
+        [(ngModel)]="pricemin"
+        [max]="pricemax"
+        (ngModelChange)="priceChange($event, 'min')"
+        [minFractionDigits]="0"
+      >
+      </p-inputNumber>
+      <label for="inputtext">Min</label>
+    </span>
+    <span class="p-md-6 p-float-label p-mt-5 p-mb-4">
+      <p-inputNumber
+        inputId="inputtext"
+        currency="INR"
+        mode="currency"
+        [min]="pricemin"
+        locale="en-IN"
+        [(ngModel)]="pricemax"
+        (ngModelChange)="priceChange($event, 'max')"
+        [minFractionDigits]="0"
+      >
+      </p-inputNumber>
+      <label for="inputtext">Max</label>
+    </span>
+  </div>
+
+  <!-- <div *ngFor="let price of priceRange" class="p-field-checkbox">
+            <p-checkbox name="price" value="price" [value]="price.key" [formControl]="filterForm.controls['price']"
                 [inputId]="price.key" (onChange)="handlePriceChange()" ></p-checkbox>
-            <label [for]="price.key">{{price.name}}</label>
-        </div>
-    </p-panel>
-    <p-panel header="Processor Type"  [toggleable]="true">        
-        <div *ngFor="let processor of processorCatg;let index=index" class="p-field-checkbox">
-                <p-checkbox name="processor" value="processor" [value]="processor" [(ngModel)]="processorSelect"
-                    [inputId]="processor.key"></p-checkbox>
-                <label [for]="processor.key">{{processor.name}}</label>
-            </div>
-    </p-panel>
-    <p-panel header="Screen Size"  [toggleable]="true">        
-        <div *ngFor="let screen of screenCatg" class="p-field-checkbox">
-            <p-checkbox name="screen" value="screen" [value]="screen" [(ngModel)]="screenSelect"
-                [inputId]="screen.key"></p-checkbox>
-            <label [for]="screen.key">{{screen.name}}</label>
-            
-        </div>
-       
-    </p-panel>
-</div>
+               <label [for]="price.key">{{price.name}}</label>
+        </div> -->
+</p-panel>
+
+<form [formGroup]="filterForm" style="width: 100%">
+  <p-panel header="Brand" [toggleable]="true">
+    <div
+      *ngFor="let brand of brandCatg; let index = index"
+      class="p-field-checkbox"
+    >
+      <p-checkbox
+        name="brand"
+        value="brand"
+        [value]="brand.key"
+        [formControl]="filterForm.controls['brand']"
+        [inputId]="brand.key"
+      ></p-checkbox>
+      <label [for]="brand.key">{{ brand.name }}</label>
+    </div>
+  </p-panel>
+  <p-panel header="Processor Type" [toggleable]="true">
+    <div
+      *ngFor="let processor of processorCatg; let index = index"
+      class="p-field-checkbox"
+    >
+      <p-checkbox
+        name="processor"
+        value="processor"
+        [value]="processor.key"
+        [formControl]="filterForm.controls['processorType']"
+        [inputId]="processor.key"
+      ></p-checkbox>
+      <label [for]="processor.key">{{ processor.name }}</label>
+    </div>
+  </p-panel>
+
+  <p-panel header="Screen Size" [toggleable]="true">
+    <div *ngFor="let screen of screenCatg" class="p-field-checkbox">
+      <p-checkbox
+        name="screen"
+        value="screen.key"
+        [value]="screen.key"
+        [formControl]="filterForm.controls['screenSize']"
+        [inputId]="screen.key"
+      ></p-checkbox>
+      <label [for]="screen.key">{{ screen.name }}</label>
+    </div>
+  </p-panel>
+</form>

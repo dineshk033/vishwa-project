@@ -33,8 +33,12 @@ import {MessageModule} from 'primeng/message';
 import {InputNumberModule} from 'primeng/inputnumber';
 import {ScrollPanelModule} from 'primeng/scrollpanel';
 import {DataViewModule} from 'primeng/dataview';
+import { LazyLoadImageModule } from 'ng-lazyload-image';
+import {SliderModule} from 'primeng/slider';
+import { SpinnerComponent } from '../spinner/spinner.component';
 
 @NgModule({
+  declarations:[SpinnerComponent],
   exports: [
     ToolbarModule,
     InputTextModule,
@@ -68,7 +72,10 @@ import {DataViewModule} from 'primeng/dataview';
     MessagesModule,
     InputNumberModule,
     ScrollPanelModule,
-    DataViewModule
+    DataViewModule,
+    LazyLoadImageModule,
+    SliderModule,
+    SpinnerComponent
   ]
 })
 export class PrimengCustomModule { }

@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule, ReactiveFormsModule} from '@angular/forms'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import {PrimengCustomModule} from '../primeng-module/primeng-module'
+import { PrimengCustomModule } from '../primeng-module/primeng-module';
 import { CustomersRoutingModule } from './customers-routing.module';
 import { CustomersComponent } from './customers.component';
 import { DashboardCustomerComponent } from './dashboard-customer/dashboard-customer.component';
@@ -24,16 +24,34 @@ import { ProductCartComponent } from './product-cart/product-cart.component';
 import { CartStepOneComponent } from './cart-step-one/cart-step-one.component';
 import { CartCardViewComponent } from './cart-card-view/cart-card-view.component';
 
-
 @NgModule({
-  declarations: [CustomersComponent, DashboardCustomerComponent, CardViewOneComponent, PopularProductComponent, CardViewTwoComponent, LaptopFilterComponent, CardViewThreeComponent, CustomerProductComponent, CustomerAmcComponent, CustomerSidebarComponent, CusCallRequestComponent, CustomerAmcInfoComponent, CustomerRequestTrackComponent, CustomerProductDetailComponent, ProductImageViewComponent, ProductTabDescComponent, ProductCartComponent, CartStepOneComponent, CartCardViewComponent],
+  declarations: [
+    CustomersComponent,
+    DashboardCustomerComponent,
+    CardViewOneComponent,
+    PopularProductComponent,
+    CardViewTwoComponent,
+    LaptopFilterComponent,
+    CardViewThreeComponent,
+    CustomerProductComponent,
+    CustomerAmcComponent,
+    CustomerSidebarComponent,
+    CusCallRequestComponent,
+    CustomerAmcInfoComponent,
+    CustomerRequestTrackComponent,
+    CustomerProductDetailComponent,
+    ProductImageViewComponent,
+    ProductTabDescComponent,
+    ProductCartComponent,
+    CartStepOneComponent,
+    CartCardViewComponent,
+  ],
   imports: [
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
     PrimengCustomModule,
-    CustomersRoutingModule
-    
-  ]
+    CustomersRoutingModule,
+  ],
 })
-export class CustomersModule { }
+export class CustomersModule {}

@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CartCardViewComponent implements OnInit {
   qtyOptions:any[];
+  
   constructor() { }
 
   ngOnInit(): void {

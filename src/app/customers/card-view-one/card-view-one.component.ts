@@ -13,20 +13,21 @@ export class CardViewOneComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.productDetail)
-    this.containerClass = {
-      'card':this.productDetail.containerClass === 'card',
-      'card box-shadow': this.productDetail.containerClass === 'cardBox'
-    }
-    this.imgClass = {
-      'card-img-style':this.productDetail.containerClass === 'card',
-      'card-img': this.productDetail.containerClass === 'cardBox'
-    }
+    // console.log(this.productDetail)
+    // this.containerClass = {
+    //   'card':this.productDetail.containerClass === 'card',
+    //   'card box-shadow': this.productDetail.containerClass === 'cardBox'
+    // }
+    // this.imgClass = {
+    //   'card-img-style':this.productDetail.containerClass === 'card',
+    //   'card-img': this.productDetail.containerClass === 'cardBox'
+    // }
     this.product={
-      image: this.productDetail?.image || 'assets/dell.jpg',
-      name: this.productDetail?.name || 'Product Name',
-      price: this.productDetail?.price || '32222',
-      offerPrice: this.productDetail?.offerPrice || '343434'  
+      // image: `https://source.unsplash.com/1600x900/?${this.productDetail.brand}`|| 'assets/dell.jpg',
+      image: 'assets/dell.jpg',
+      name: this.productDetail?.display_name || 'Product Name',
+      price: Math.random()*30000,
+      offerPrice:  Math.random()*40000,
 
     }
   }

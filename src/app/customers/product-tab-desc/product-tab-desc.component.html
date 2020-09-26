@@ -6,7 +6,12 @@
                 <b>{{item.label}}</b>
            </div>
            <div class="span-2" >
-            {{itemValue[item.key]?itemValue[item.key]:'-'}}
+               <ng-template [ngIf]="!item.subKey"  [ngIfElse]="nestedObject" >
+                {{itemValue[item.key]?itemValue[item.key]:'-'}}
+               </ng-template>
+               <ng-template #nestedObject >
+                {{itemValue[item.key][item.subKey]?itemValue[item.key][item.subKey]:'-'}}
+               </ng-template>
            </div>
         </ng-template>        
     </div>

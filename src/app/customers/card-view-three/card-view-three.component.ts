@@ -7,10 +7,11 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class CardViewThreeComponent implements OnInit {
   @Input() productDetail:any;
-
+  image;
   constructor() { }
 
   ngOnInit(): void {
+    this.image = `https://source.unsplash.com/1600x900/?${this.productDetail.brand}`
   }
 
 }

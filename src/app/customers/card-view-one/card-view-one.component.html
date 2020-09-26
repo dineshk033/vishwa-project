@@ -1,9 +1,10 @@
 <div class="card box-shadow">
     <div>
-        <img class="card-img" [src]="product.image" />        
+        <img class="card-img" defaultImage="assets/infinity.svg" [lazyLoad]="product.image" [useSrcset]="true" offset="100" />     
+
     </div>
     <div class="p-px-3 card-body " style="position: relative;">
-        <h4 class="card-title ">{{product.name}}</h4>
+        <h4 class="card-title "  [routerLink]="['/product',product.name]">{{product.name}}</h4>
   <div class="p-d-flex p-ai-center p-jc-between">
             <h4 class="card-price">
                 {{product.offerPrice|currency:'INR'}}
